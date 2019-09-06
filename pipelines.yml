@@ -1,0 +1,26 @@
+resources:
+  - name: java_app
+    type: GitRepo
+    configuration:
+      gitProvider: ranjithr_github
+      path: ranjithrs/simple_maven_sample
+      branches:
+        include: master
+
+pipelines:
+  - name: java_pipeline
+    steps:
+      - name: step_1
+        type: MvnBuild
+        configuration:
+          sourceLocation: .
+          mvnCommand: clean install -ntp
+          configFileName: mvn-art-config
+          nodePool: ranjithr_pool
+          inputResources:
+            - name: java_app
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
