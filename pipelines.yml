@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: ranjithr_github
-      path: ranjithrs/simple_maven_sample
+      path: ranjithrs/simple-maven-sample
       branches:
         include: master
 
