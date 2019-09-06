@@ -29,4 +29,6 @@ pipelines:
                 language: java
         execution:
           onComplete:
-            - sleep 200        
+            - sleep 200
+          onStart:
+            - printenv         
