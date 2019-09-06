@@ -20,12 +20,12 @@ public class CalculatorTest {
 
 	@Before
 	public void beforeEachTest() {
-		System.out.println("This is executed before each Test");
+		//System.out.println("This is executed before each Test");
 	}
 
 	@After
 	public void afterEachTest() {
-		System.out.println("This is exceuted after each Test");
+		//System.out.println("This is exceuted after each Test");
 	}
 
 	@Test
@@ -51,7 +51,6 @@ public class CalculatorTest {
 		calculator.divison(10, 0);
 	}
 
-	@Ignore
 	@Test
 	public void testEqual() {
 		boolean result = calculator.equalIntegers(20, 20);
