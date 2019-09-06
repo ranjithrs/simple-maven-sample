@@ -27,3 +27,5 @@ pipelines:
             image:
               auto:
                 language: java
+        onComplete:
+          sleep 200        
