@@ -29,6 +29,4 @@ pipelines:
                 language: java
         execution:
           onComplete:
-            - sleep 200
-          onStart:
-            - printenv         
+            - save_tests $res_java_app_resourcePath/target/surefire-reports/
