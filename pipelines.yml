@@ -26,7 +26,7 @@ pipelines:
             type: image
             image:
               custom:
-                name: pipelines-docker.jfrog.io/jfrog/pipelines-u16java
+                name: drydock/u18java
                 tag: master
         execution:
           onComplete:
