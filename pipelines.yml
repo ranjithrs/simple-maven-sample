@@ -17,7 +17,6 @@ pipelines:
           mvnCommand: clean install -ntp
           configFileLocation: .
           configFileName: mvn-art-config
-          nodePool: ranjithr_pool
           integrations:
             - name: jfrogtraining
           inputResources:
