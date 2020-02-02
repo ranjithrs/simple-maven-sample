@@ -24,9 +24,10 @@ pipelines:
           runtime:
             type: image
             image:
-              custom:
-                name: drydock/u18java
-                tag: master
+              auto:
+                language: java
+                versions:
+                  - "11"
         execution:
           onComplete:
             - save_tests $res_java_app_resourcePath/target/surefire-reports/
