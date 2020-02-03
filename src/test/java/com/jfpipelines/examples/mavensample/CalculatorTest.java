@@ -41,7 +41,7 @@ public class CalculatorTest {
 
 		assertEquals(7, result);
 	}
-	
+
 	@Test
 	public void testDivison() {
 		try {
@@ -55,6 +55,11 @@ public class CalculatorTest {
 
 	@Test(expected = Exception.class)
 	public void testDivisionException() throws Exception {
+		calculator.divison(10, 0);
+	}
+
+	@Test
+	public void testDivisionByZero() throws Exception {
 		calculator.divison(10, 0);
 	}
 
