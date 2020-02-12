@@ -16,6 +16,11 @@ resources:
 pipelines:
   - name: java_pipeline
     steps:
+      - name: scan_build
+        type: XrayScan
+        configuration:
+          inputResources:
+            - name: my_build_info
       - name: build_app
         type: MvnBuild
         configuration:
