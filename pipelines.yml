@@ -23,6 +23,7 @@ pipelines:
           mvnCommand: clean install -ntp
           configFileLocation: .
           configFileName: mvn-art-config
+          autoPublishBuildInfo: true
           integrations:
             - name: jfrogtraining
           inputResources:
