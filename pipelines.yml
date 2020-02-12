@@ -6,6 +6,12 @@ resources:
       path: ranjithrs/simple-maven-sample
       branches:
         include: master
+  - name: my_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: art
+      buildName: maven-sample
+      buildNumber: 1
 
 pipelines:
   - name: java_pipeline
@@ -21,6 +27,8 @@ pipelines:
             - name: jfrogtraining
           inputResources:
             - name: java_app
+          outputResources:
+            - my_build_info
           runtime:
             type: image
             image:
@@ -31,3 +39,4 @@ pipelines:
         execution:
           onComplete:
             - save_tests $res_java_app_resourcePath/target/surefire-reports/
+            
