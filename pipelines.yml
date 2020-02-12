@@ -10,7 +10,7 @@ resources:
     type: BuildInfo
     configuration:
       sourceArtifactory: art
-      buildName: maven-sample
+      buildName: simple-maven-sample
       buildNumber: 1
 
 pipelines:
@@ -28,7 +28,7 @@ pipelines:
           inputResources:
             - name: java_app
           outputResources:
-            - my_build_info
+            - name: my_build_info
           runtime:
             type: image
             image:
