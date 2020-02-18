@@ -9,7 +9,7 @@ resources:
   - name: my_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: jfrogtraining
+      sourceArtifactory: art
       buildName: simple-maven-sample
       buildNumber: 1
 
